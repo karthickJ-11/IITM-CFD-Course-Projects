@@ -1,0 +1,4 @@
+nvcc / NVIDIA GPU not found: skipping the GPU runs
+CPU (serial emulation) 129: Grid 129 x 129, Dt = 0.001, steps = 10940, wall time = 3.386 s
+CPU (serial emulation) 257: Grid 257 x 257, Dt = 0.00035, steps = 39616, wall time = 37.500 s
+CPU (serial emulation) 401: Grid 401 x 401, Dt = 0.00015, steps = 95127, wall time = 710.598 s

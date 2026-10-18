@@ -1,0 +1,10 @@
+grid | psi_min | vortex centre | max|u-u_Ghia| | rms u | max|v-v_Ghia| | rms v | u_min | v_max | v_min
+49x49 | -0.10294 | (0.6122,0.7347) | 0.0048 | 0.0020 | 0.0077 | 0.0037 | -0.21124 | 0.17733 | -0.25125
+99x99 | -0.10337 | (0.6162,0.7374) | 0.0049 | 0.0022 | 0.0088 | 0.0044 | -0.21333 | 0.17889 | -0.25306
+Ghia: psi_min=-0.103423, centre=(0.6172,0.7344), u_min=-0.21090, v_max=0.17527, v_min=-0.24533
+steady state at t=13.50 (last logged step 13500)
+49x49 BR eddy: psi_max=1.615e-05 at (0.9388,0.0612)
+49x49 BL eddy: psi_max=3.240e-06 at (0.0408,0.0408)
+99x99 BR eddy: psi_max=1.349e-05 at (0.9394,0.0606)
+99x99 BL eddy: psi_max=2.126e-06 at (0.0303,0.0404)
+Ghia BR: 1.25374e-5 at (0.9453,0.0625); BL: 1.74877e-6 at (0.0313,0.0391)

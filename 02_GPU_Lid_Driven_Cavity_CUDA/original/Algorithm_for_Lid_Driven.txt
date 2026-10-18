@@ -1,0 +1,81 @@
+**Algorithm for Lid-Driven Cavity Flow Solver (Vorticity-Stream Function Approach)**  
+
+Algorithm: Lid-Driven Cavity Flow Solver (Vorticity-Stream Function Method)
+
+1. Initialize Simulation Parameters
+   - Domain size L, grid spacing dx/dy
+   - Reynolds number Re, viscosity μ, density ρ
+   - Time step dt, max iterations, convergence threshold
+   - Lid velocity U_wall
+
+2. Allocate Memory
+   - Vorticity array ζ[Nx][Ny]
+   - Stream function Ψ[Nx][Ny]
+   - Velocity components u[Nx][Ny], v[Nx][Ny]
+   - Previous vorticity ζ_prev[Nx][Ny]
+
+3. Initialize Arrays to Zero
+   ζ ← 0, Ψ ← 0, u ← 0, v ← 0
+
+4. Main Simulation Loop
+   for iter = 1 to MaxIter do
+       4.1 Apply Boundary Conditions (Equations 30-33 from PDF)
+           - Top wall: ζ_top = -2Ψ_second_last_row/dy² - 2U_wall/dy
+           - Bottom: ζ_bottom = -2Ψ_second_row/dy²
+           - Left: ζ_left = -2Ψ_second_col/dx²
+           - Right: ζ_right = -2Ψ_second_last_col/dx²
+
+       4.2 Store Previous Vorticity
+           ζ_prev ← ζ
+
+       4.3 Update Vorticity (Equation 16 from PDF)
+           for all interior points (i,j) do
+               ∂Ψ/∂x = (Ψ[i+1,j] - Ψ[i-1,j])/(2dx)
+               ∂Ψ/∂y = (Ψ[i,j+1] - Ψ[i,j-1])/(2dy)
+               ∇²ζ = (ζ_prev[i+1,j] + ζ_prev[i-1,j] 
+                     + ζ_prev[i,j+1] + ζ_prev[i,j-1] 
+                     - 4ζ_prev[i,j])/(dx²)
+               
+               ζ[i,j] = ζ_prev[i,j] + dt * [
+                   (∂Ψ/∂y * (ζ_prev[i+1,j] - ζ_prev[i-1,j])/(2dx))
+                   - (∂Ψ/∂x * (ζ_prev[i,j+1] - ζ_prev[i,j-1])/(2dy))
+                   + (μ/ρ) * ∇²ζ
+               ]
+           end
+
+       4.4 Solve Stream Function (Equation 18 from PDF)
+           Red-Black Gauss-Seidel Iteration:
+           for phase = 0 to 1 do
+               for all points (i,j) where (i+j)%2 == phase do
+                   Ψ[i,j] = 0.25 * [
+                       Ψ[i+1,j] + Ψ[i-1,j]
+                       + Ψ[i,j+1] + Ψ[i,j-1]
+                       + dx² * ζ[i,j]
+                   ]
+               end
+           end
+
+       4.5 Check Convergence
+           if iter > 10 then
+               max_error = max(|ζ - ζ_prev|)
+               if max_error < tolerance then
+                   break
+               end
+           end
+
+       4.6 Periodic Output
+           if iter % output_interval == 0 then
+               Calculate velocities (Equations 34-35):
+                   u = ∂Ψ/∂y, v = -∂Ψ/∂x
+               Write Tecplot file with (x,y,u,v,ζ,Ψ)
+           end
+   end
+
+5. Final Output
+   Calculate velocities
+   Write final Tecplot file
+
+6. Visualize Results
+   - ParaView: Load Tecplot files, create contours/streamlines
+   - Plot velocity profiles and vorticity distribution
+

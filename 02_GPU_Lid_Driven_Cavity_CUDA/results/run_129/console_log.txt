@@ -1,0 +1,12 @@
+Iter 1000: Max Error = 4.418367e-03
+Iter 2000: Max Error = 1.818333e-03
+Iter 3000: Max Error = 8.997082e-04
+Iter 4000: Max Error = 4.259253e-04
+Iter 5000: Max Error = 1.837664e-04
+Iter 6000: Max Error = 7.574766e-05
+Iter 7000: Max Error = 4.462080e-05
+Iter 8000: Max Error = 2.916702e-05
+Iter 9000: Max Error = 1.714723e-05
+Iter 10000: Max Error = 1.408800e-05
+Converged after 10939 iterations
+Grid 129 x 129, Dt = 0.001, steps = 10940, wall time = 3.386 s

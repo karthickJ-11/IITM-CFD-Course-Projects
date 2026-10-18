@@ -1,0 +1,6 @@
+Enter total physical time (default: 5.0s): Enter output interval in time steps (default: 100): Initial time step: 1.282051e-04 seconds
+Time: 0.0013 s, Step: 10, Iterations: 1, Residual: -nan, Max Velocity: 0.0000 m/s
+Saved VTK file: blood_flow_t0.0013.vtk
+Time: 0.0020 s, Step: 16, Iterations: 1, Residual: -nan, Max Velocity: 0.0000 m/s
+Saved VTK file: blood_flow_t0.0020.vtk
+Total simulation time: 10.63 seconds

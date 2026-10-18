@@ -1,0 +1,6 @@
+Grid convergence (Celik et al. 2008): grids 401, 257, 129  (r21 = 1.5625, r32 = 2.0000); data: results/grid_study_tight (steady-state tolerance |dw/dt| < 1e-4)
+quantity | phi1 (finest) | phi2 | phi3 | observed p | extrapolated phi | GCI_fine [%]
+psi_min | -0.103503 | -0.103476 | -0.103335 | 2.02 | -0.103522 | 0.022
+u_min | -0.213985 | -0.213896 | -0.213444 | 2.01 | -0.214046 | 0.036
+v_max | 0.179504 | 0.179403 | 0.178882 | 2.02 | 0.179573 | 0.048
+v_min | -0.253704 | -0.253565 | -0.252853 | 2.01 | -0.253801 | 0.047

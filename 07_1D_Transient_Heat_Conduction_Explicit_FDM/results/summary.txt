@@ -1,0 +1,4 @@
+dt=0.1  gamma=2.50e-02  max|err| at t=10 s = 5.256e-03
+dt=0.01  gamma=2.50e-03  max|err| at t=10 s = 5.325e-03
+dt=0.001  gamma=2.50e-04  max|err| at t=10 s = 5.332e-03
+T(x=2 cm, t=10 s): FDM dt=0.001 -> 0.6525, exact -> 0.6547

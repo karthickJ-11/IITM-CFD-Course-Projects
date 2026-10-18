@@ -1,0 +1,17 @@
+== Newtonian verification (mu = mu0 = 0.056 Pa s, L = 20 mm, section x = 15 mm)
+   G = -dp/dx: computed 21368.08 Pa/m, analytical 21394.29 (rel -1.225e-03); exact discrete 21368.13 (rel -2.58e-06)
+   max|u - u_analytical| = 4.367e-04 m/s (0.075 % of u_max); max|u - u_discrete-exact| = 1.80e-06 m/s
+   tau_w = 37.394 Pa (analytical 6 mu U / W = 37.440 Pa, rel -1.22e-03);  max|v| = 1.45e-04 m/s
+== Bird-Carreau, LAD domain 140 x 3.5 mm (1400 x 35 cells)
+   mean inflow 0.39016 m/s; fully developed (ODE): G = 2416.2 Pa/m, u_centre = 0.5636 m/s, tau_w = 4.228 Pa, wall shear rate 717.0 1/s, wall viscosity 5.897 mPa s
+   computed (x > 80 mm): G = 2414.4 Pa/m (rel -7.41e-04); at x = 120 mm: u_centre = 0.5625 m/s, max|u - u_ODE| = 1.11e-03 m/s (0.20 %), tau_w = 4.204 Pa (rel -5.89e-03)
+   Newtonian references at the same flow rate: G(mu0) = 21403 Pa/m, G(mu_inf) = 1338 Pa/m; tau_w(mu0) = 37.46 Pa, tau_w(mu_inf) = 2.341 Pa
+   pressure drop inlet cell -> outlet cell: 334.7 Pa (Poiseuille with mu0 would need 2994 Pa; initial guess del_P = 2886.3 Pa)
+   centreline development length (1 % of the inlet excess): L_e = 50.4 mm  = 14.41 W
+   run: 59961 time steps to t = 2.000 s; dt 2.026e-05-3.336e-05 s; SOR sweeps/step median 18, max 45; final RMS du/dt 1.63e-04 m/s^2; max|div|dx/U <= 1.9e-07
+== ablation ablation_point_sor: t = 20.0 ms, Q(x)/Q_in in [0.9601, 1.0000], final max|div|dx/U = 6.08e-04, sweeps/step 1000
+== ablation ablation_block_corr: t = 20.0 ms, Q(x)/Q_in in [1.0000, 1.0000], final max|div|dx/U = 1.54e-07, sweeps/step 25
+== timing
+nvcc / NVIDIA GPU not found (or 'cpu' given): GPU runs skipped
+CPU (serial emulation) newtonian_20mm: Total simulation time: 24.15 seconds (8995 time steps, 2.685 ms per step)
+CPU (serial emulation) carreau_full: Total simulation time: 612.29 seconds (59961 time steps, 10.212 ms per step)

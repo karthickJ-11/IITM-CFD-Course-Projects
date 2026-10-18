@@ -1,0 +1,5 @@
+Grid 1400 x 35 cells (0.1400 m x 0.0035 m), t_end = 0.0200 s, VTK every 100000 steps, SOR omega = 1.850, max sweeps = 1000, block correction = 1
+Initial time step: 3.335547e-05 seconds
+Time: 0.0200 s, Step: 600, Poisson sweeps: 25, RMS du/dt: 1.726610e+00, Max Velocity: 0.5850 m/s, max|div|DX/U: 1.54e-07, Qout/Qin: 1.000000
+Saved VTK file: blood_flow_t0.0200.vtk
+Total simulation time: 35.17 seconds (600 time steps, 58.615 ms per step)

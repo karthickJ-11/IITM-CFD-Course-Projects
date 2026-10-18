@@ -1,0 +1,16 @@
+scheme | iters(corrected) | Q_bottom(corrected,W) | max|T-T_direct| | iters(original) | Q(original formula,W)
+Point Gauss-Seidel | 296 | 12842.45 | 6.415e-01 | 296 | 4825.0
+Line Gauss-Seidel | 171 | 12834.04 | 3.136e-01 | 149 | 4825.0
+PSOR ($\omega$=1.5) | 124 | 12819.77 | 1.987e-01 | 63 | 4825.0
+LSOR ($\omega$=1.5) | 69 | 12822.75 | 8.855e-02 | 63 | 4825.0
+ADI | 86 | 12831.47 | 3.114e-01 | 336 | 4825.0
+ADI relaxed ($\omega$=1.5) | 37 | 12819.07 | 8.132e-02 | 8 | 4825.0
+Direct solve: Q_bottom=12813.59 W ; out: top=33.65, left=6389.97, right=6389.97, sum=12813.59
+max|direct - analytical| interior = 5.037e-01 C
+rho_Jacobi=0.99230  omega_opt(PSOR)=1.7796
+PSOR: best omega=1.75 iters=59
+LSOR: best omega=1.7 iters=41
+ADI relaxed: best omega=1.75 iters=21
+grid 11x21: Q_bottom=9720.27 W, T_centre=33.9067, exact=33.8419, max err=5.209e-01
+grid 21x41: Q_bottom=12813.59 W, T_centre=33.8583, exact=33.8419, max err=5.037e-01
+grid 41x81: Q_bottom=15903.62 W, T_centre=33.8461, exact=33.8419, max err=5.027e-01

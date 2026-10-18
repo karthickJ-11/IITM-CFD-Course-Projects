@@ -1,0 +1,9 @@
+jacobi d=0.1 : Converged after 166 iterations
+jacobi d=0.05 : Converged after 559 iterations
+jacobi d=0.01 : Converged after 7491 iterations
+gauss_seidel d=0.1 : Converged after 91 iterations
+gauss_seidel d=0.05 : Converged after 308 iterations
+gauss_seidel d=0.01 : Converged after 4441 iterations
+sur d=0.1 : Converged after 165 iterations
+sur d=0.05 : Converged after 553 iterations
+sur d=0.01 : Converged after 7753 iterations

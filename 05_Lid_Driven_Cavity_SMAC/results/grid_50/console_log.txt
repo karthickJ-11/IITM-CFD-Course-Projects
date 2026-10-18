@@ -1,0 +1,8 @@
+SMAC lid-driven cavity: Re=100, 49x49 cells, dt=0.001, CFL=0.049, diffusion number=0.024
+step   2000  t=  2.000  max|du|=6.680e-05  SOR its=83
+step   4000  t=  4.000  max|du|=1.779e-05  SOR its=58
+step   6000  t=  6.000  max|du|=5.811e-06  SOR its=44
+step   8000  t=  8.000  max|du|=2.001e-06  SOR its=18
+step  10000  t= 10.000  max|du|=6.852e-07  SOR its=15
+step  12000  t= 12.000  max|du|=2.330e-07  SOR its=7
+Steady state reached at step 13561 (t = 13.561)

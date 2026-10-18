@@ -1,0 +1,3 @@
+nvcc / NVIDIA GPU not found (or 'cpu' given): GPU runs skipped
+CPU (serial emulation) newtonian_20mm: Total simulation time: 24.15 seconds (8995 time steps, 2.685 ms per step)
+CPU (serial emulation) carreau_full: Total simulation time: 612.29 seconds (59961 time steps, 10.212 ms per step)
